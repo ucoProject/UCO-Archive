@@ -2210,6 +2210,11 @@ observable:EmailMessageFacet
 			sh:path observable:references ;
 		] ,
 		[
+			sh:class observable:ObservableObject ;
+			sh:nodeKind sh:BlankNodeOrIRI ;
+			sh:path observable:to ;
+		] ,
+		[
 			sh:class types:Dictionary ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:BlankNodeOrIRI ;
@@ -3544,6 +3549,11 @@ observable:MessageFacet
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:BlankNodeOrIRI ;
 			sh:path observable:from ;
+		] ,
+		[
+			sh:class observable:ObservableObject ;
+			sh:nodeKind sh:BlankNodeOrIRI ;
+			sh:path observable:to ;
 		] ,
 		[
 			sh:datatype xsd:dateTime ;
