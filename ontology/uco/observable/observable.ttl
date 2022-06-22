@@ -6,6 +6,7 @@
 # imports: https://ontology.unifiedcyberontology.org/uco/vocabulary
 
 @prefix action: <https://ontology.unifiedcyberontology.org/uco/action/> .
+@prefix co: <http://purl.org/co/> .
 @prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
@@ -3859,9 +3860,20 @@ observable:MessageThread
 		owl:Class ,
 		sh:NodeShape
 		;
-	rdfs:subClassOf observable:ObservableObject ;
+	rdfs:subClassOf
+		observable:ObservableObject ,
+		types:Thread
+		;
 	rdfs:label "MessageTread"@en ;
 	rdfs:comment "A message thread is a running commentary of electronic messages pertaining to one topic or question."@en ;
+	sh:property [
+		sh:class observable:Message ;
+		sh:description "A MessageThread's items' contents must be Message objects."@en ;
+		sh:path (
+			co:item
+			co:itemContent
+		) ;
+	] ;
 	sh:targetClass observable:MessageThread ;
 	.
 
