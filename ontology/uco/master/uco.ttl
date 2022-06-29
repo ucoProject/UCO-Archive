@@ -1,4 +1,5 @@
 # imports: http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf
+# imports: https://ontology.unifiedcyberontology.org/co
 # imports: https://ontology.unifiedcyberontology.org/uco/action
 # imports: https://ontology.unifiedcyberontology.org/uco/core
 # imports: https://ontology.unifiedcyberontology.org/uco/identity
@@ -26,6 +27,7 @@
 	rdfs:label "uco-master"@en ;
 	owl:imports
 		<http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf> ,
+		<https://ontology.unifiedcyberontology.org/co> ,
 		<https://ontology.unifiedcyberontology.org/uco/action> ,
 		<https://ontology.unifiedcyberontology.org/uco/core> ,
 		<https://ontology.unifiedcyberontology.org/uco/identity> ,
