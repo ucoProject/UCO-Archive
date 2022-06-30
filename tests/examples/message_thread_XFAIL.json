@@ -10,7 +10,8 @@
     "@graph": [
         {
             "@id": "kb:message-1",
-            "@type": "observable:Message"
+            "@type": "observable:ObservableObject",
+            "rdfs:comment": "The non-Message class will trigger errors pertaining to co:element, co:itemContent and types:threadOriginItem."
         },
         {
             "@id": "kb:message-2",
@@ -30,14 +31,15 @@
         },
         {
             "@id": "kb:message-6",
-            "@type": "observable:Message"
+            "@type": "observable:ObservableObject",
+            "rdfs:comment": "The non-Message class will trigger errors pertaining to co:element, co:itemContent and types:threadTerminalItem."
         },
         {
             "@id": "kb:message-7",
             "@type": "observable:Message"
         },
         {
-            "@id": "kb:message-thread-1",
+            "@id": "kb:message-thread-2",
             "@type": "observable:MessageThread",
             "core:hasFacet": {
                 "@type": "observable:MessageThreadFacet",
@@ -62,132 +64,154 @@
                     }
                 ],
                 "observable:messageThread": {
-                    "@id": "kb:thread-1"
+                    "@id": "kb:thread-2"
                 }
             }
         },
         {
-            "@id": "kb:thread-1",
+            "@id": "kb:thread-2",
             "@type": "types:Thread",
             "co:size": {
                 "@type": "xsd:nonNegativeInteger",
                 "@value": "6"
             },
-            "co:item": [
+            "co:element": [
                 {
-                    "@id": "kb:message-thread-1-item-1"
+                    "@id": "kb:message-1"
                 },
                 {
-                    "@id": "kb:message-thread-1-item-2"
+                    "@id": "kb:message-2"
                 },
                 {
-                    "@id": "kb:message-thread-1-item-3"
+                    "@id": "kb:message-3"
                 },
                 {
-                    "@id": "kb:message-thread-1-item-4"
+                    "@id": "kb:message-4"
                 },
                 {
-                    "@id": "kb:message-thread-1-item-5"
+                    "@id": "kb:message-5"
                 },
                 {
-                    "@id": "kb:message-thread-1-item-6"
+                    "@id": "kb:message-6"
                 }
+            ],
+            "co:item": [
+
+                {
+                    "@id": "kb:message-thread-2-item-1"
+                },
+                {
+                    "@id": "kb:message-thread-2-item-2"
+                },
+                {
+                    "@id": "kb:message-thread-2-item-3"
+                },
+                {
+                    "@id": "kb:message-thread-2-item-4"
+                },
+                {
+                    "@id": "kb:message-thread-2-item-5"
+                },
+                {
+                    "@id": "kb:message-thread-2-item-6"
+                }
+
             ],
             "types:threadOriginItem": [
                 {
-                    "@id": "kb:message-thread-1-item-1"
+                    "@id": "kb:message-thread-2-item-1"
                 },
                 {
-                    "@id": "kb:message-thread-1-item-5"
+                    "@id": "kb:message-thread-2-item-5"
                 }
             ],
             "types:threadTerminalItem": [
                 {
-                    "@id": "kb:message-thread-1-item-3"
+                    "@id": "kb:message-thread-2-item-3"
                 },
                 {
-                    "@id": "kb:message-thread-1-item-4"
+                    "@id": "kb:message-thread-2-item-4"
                 },
                 {
-                    "@id": "kb:message-thread-1-item-6"
+                    "@id": "kb:message-thread-2-item-6"
                 }
             ]
         },
         {
-            "@id": "kb:message-thread-1-item-1",
+            "@id": "kb:message-thread-2-item-1",
             "@type": "types:ThreadItem",
             "co:itemContent": {
                 "@id": "kb:message-1"
             },
             "types:threadNextItem": [
                 {
-                    "@id": "kb:message-thread-1-item-2"
+                    "@id": "kb:message-thread-2-item-2"
                 },
                 {
-                    "@id": "kb:message-thread-1-item-6"
+                    "@id": "kb:message-thread-2-item-6"
                 }
             ]
         },
         {
-            "@id": "kb:message-thread-1-item-2",
+            "@id": "kb:message-thread-2-item-2",
             "@type": "types:ThreadItem",
             "co:itemContent": {
                 "@id": "kb:message-2"
             },
             "types:threadNextItem": [
                 {
-                    "@id": "kb:message-thread-1-item-3"
+                    "@id": "kb:message-thread-2-item-3"
                 },
                 {
-                    "@id": "kb:message-thread-1-item-4"
+                    "@id": "kb:message-thread-2-item-4"
                 }
             ],
             "types:threadPreviousItem": {
-                "@id": "kb:message-thread-1-item-1"
+                "@id": "kb:message-thread-2-item-1"
             }
         },
         {
-            "@id": "kb:message-thread-1-item-3",
+            "@id": "kb:message-thread-2-item-3",
             "@type": "types:ThreadItem",
             "co:itemContent": {
                 "@id": "kb:message-3"
             },
             "types:threadPreviousItem": {
-                "@id": "kb:message-thread-1-item-2"
+                "@id": "kb:message-thread-2-item-2"
             }
         },
         {
-            "@id": "kb:message-thread-1-item-4",
+            "@id": "kb:message-thread-2-item-4",
             "@type": "types:ThreadItem",
             "co:itemContent": {
                 "@id": "kb:message-4"
             },
             "types:threadPreviousItem": {
-                "@id": "kb:message-thread-1-item-2"
+                "@id": "kb:message-thread-2-item-2"
             }
         },
         {
-            "@id": "kb:message-thread-1-item-5",
+            "@id": "kb:message-thread-2-item-5",
             "@type": "types:ThreadItem",
             "co:itemContent": {
                 "@id": "kb:message-5"
             },
             "types:threadNextItem": {
-                "@id": "kb:message-thread-1-item-6"
+                "@id": "kb:message-thread-2-item-6"
             }
         },
         {
-            "@id": "kb:message-thread-1-item-6",
+            "@id": "kb:message-thread-2-item-6",
             "@type": "types:ThreadItem",
             "co:itemContent": {
                 "@id": "kb:message-6"
             },
             "types:threadPreviousItem": [
                 {
-                    "@id": "kb:message-thread-1-item-1"
+                    "@id": "kb:message-thread-2-item-1"
                 },
                 {
-                    "@id": "kb:message-thread-1-item-5"
+                    "@id": "kb:message-thread-2-item-5"
                 }
             ]
         }

@@ -319,6 +319,9 @@ WHERE {
 def test_message_thread_PASS_validation():
     confirm_validation_results("message_thread_PASS_validation.ttl", True)
 
+def test_message_thread_XFAIL_validation():
+    confirm_validation_results("message_thread_XFAIL_validation.ttl", False)
+
 def test_mime_PASS_validation() -> None:
     confirm_validation_results(
       "mime_PASS_validation.ttl",

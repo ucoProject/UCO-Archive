@@ -320,6 +320,7 @@ types:threadOriginItem
 types:threadOriginItem-subjects-shape
 	a sh:PropertyShape ;
 	sh:class types:ThreadItem ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
 	sh:path types:threadOriginItem ;
 	sh:targetSubjectsOf types:threadOriginItem ;
 	.
@@ -328,6 +329,7 @@ types:threadOriginItem-subjects-threadPredecessor-shape
 	a sh:PropertyShape ;
 	sh:description "An origin item in a thread must not have a predecessor."@en ;
 	sh:maxCount "0"^^xsd:integer ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
 	sh:path (
 		types:threadOriginItem
 		types:threadPredecessor
@@ -339,6 +341,7 @@ types:threadOriginItem-subjects-threadPreviousItem-shape
 	a sh:PropertyShape ;
 	sh:description "An origin item in a thread must not have a previous item."@en ;
 	sh:maxCount "0"^^xsd:integer ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
 	sh:path (
 		types:threadOriginItem
 		types:threadPreviousItem
@@ -427,6 +430,7 @@ types:threadTerminalItem
 types:threadTerminalItem-subjects-shape
 	a sh:PropertyShape ;
 	sh:class types:ThreadItem ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
 	sh:path types:threadTerminalItem ;
 	sh:targetSubjectsOf types:threadTerminalItem ;
 	.
@@ -435,6 +439,7 @@ types:threadTerminalItem-subjects-threadNextItem-shape
 	a sh:PropertyShape ;
 	sh:description "A terminal item in a thread must not have a next item."@en ;
 	sh:maxCount "0"^^xsd:integer ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
 	sh:path (
 		types:threadTerminalItem
 		types:threadNextItem
@@ -446,6 +451,7 @@ types:threadTerminalItem-subjects-threadSuccessor-shape
 	a sh:PropertyShape ;
 	sh:description "A terminal item in a thread must not have a successor."@en ;
 	sh:maxCount "0"^^xsd:integer ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
 	sh:path (
 		types:threadTerminalItem
 		types:threadSuccessor
