@@ -153,7 +153,6 @@ tool:BuildUtilityType
 		[
 			sh:datatype xsd:string ;
 			sh:maxCount "1"^^xsd:integer ;
-			sh:minCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
 			sh:path tool:buildUtilityName ;
 		] ,
@@ -220,15 +219,14 @@ tool:ConfigurationSettingType
 		[
 			sh:datatype xsd:string ;
 			sh:maxCount "1"^^xsd:integer ;
-			sh:minCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
-			sh:path tool:itemName ;
+			sh:path tool:itemDescription ;
 		] ,
 		[
 			sh:datatype xsd:string ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
-			sh:path tool:itemDescription ;
+			sh:path tool:itemName ;
 		] ,
 		[
 			sh:datatype xsd:string ;
@@ -309,7 +307,6 @@ tool:DependencyType
 		[
 			sh:datatype xsd:string ;
 			sh:maxCount "1"^^xsd:integer ;
-			sh:minCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
 			sh:path tool:dependencyDescription ;
 		] ,
@@ -334,14 +331,12 @@ tool:LibraryType
 		[
 			sh:datatype xsd:string ;
 			sh:maxCount "1"^^xsd:integer ;
-			sh:minCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
 			sh:path tool:libraryName ;
 		] ,
 		[
 			sh:datatype xsd:string ;
 			sh:maxCount "1"^^xsd:integer ;
-			sh:minCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
 			sh:path tool:libraryVersion ;
 		]
