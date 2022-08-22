@@ -184,8 +184,14 @@ def test_configuration_setting_PASS_validation() -> None:
     assert isinstance(g, rdflib.Graph)
 
 def test_configuration_setting_XFAIL_validation() -> None:
-    g = load_validation_graph("configuration_setting_XFAIL_validation.ttl", False)
-    assert isinstance(g, rdflib.Graph)
+    confirm_validation_results(
+      "configuration_setting_XFAIL_validation.ttl",
+      False,
+      expected_focus_node_severities={
+        ("http://example.org/kb/configuration-entry-3", str(NS_SH.Violation)),
+        ("http://example.org/kb/configured-object-2", str(NS_SH.Violation)),
+      }
+)
 
 def test_has_facet_inverse_functional_PASS() -> None:
     confirm_validation_results(
