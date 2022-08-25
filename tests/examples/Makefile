@@ -31,9 +31,6 @@ all: \
   hash_XFAIL_validation.ttl \
   location_PASS_validation.ttl \
   location_XFAIL_validation.ttl \
-  mime_PASS_validation.ttl \
-  mime_XFAIL_validation.ttl \
-  mime_prefix_PASS_validation.ttl \
   message_thread_PASS_validation.ttl \
   message_thread_XFAIL_validation.ttl \
   owl_axiom_PASS_validation.ttl \
@@ -99,9 +96,6 @@ check: \
   hash_XFAIL_validation.ttl \
   location_PASS_validation.ttl \
   location_XFAIL_validation.ttl \
-  mime_PASS_validation.ttl \
-  mime_XFAIL_validation.ttl \
-  mime_prefix_PASS_validation.ttl \
   message_thread_PASS_validation.ttl \
   message_thread_XFAIL_validation.ttl \
   owl_axiom_PASS_validation.ttl \
