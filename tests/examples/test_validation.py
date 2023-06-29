@@ -207,6 +207,12 @@ def test_database_records_XFAIL() -> None:
       }
     )
 
+def test_file_url_XFAIL_validation() -> None:
+    confirm_validation_results(
+      "file_url_XFAIL_validation.ttl",
+      False,
+    )
+
 def test_has_facet_inverse_functional_PASS() -> None:
     confirm_validation_results(
       "has_facet_inverse_functional_PASS_validation.ttl",
