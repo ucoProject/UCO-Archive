@@ -28,6 +28,7 @@ all: \
   configuration_setting_XFAIL_validation.ttl \
   database_records_PASS_validation.ttl \
   database_records_XFAIL_validation.ttl \
+  dictionary_PASS_validation.ttl \
   disjointedness_PASS_validation.ttl \
   event_XFAIL_validation.ttl \
   file_url_PASS_validation.ttl \
@@ -103,6 +104,7 @@ check: \
   configuration_setting_XFAIL_validation.ttl \
   database_records_PASS_validation.ttl \
   database_records_XFAIL_validation.ttl \
+  dictionary_PASS_validation.ttl \
   disjointedness_PASS_validation.ttl \
   event_XFAIL_validation.ttl \
   file_url_PASS_validation.ttl \
