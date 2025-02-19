@@ -108,44 +108,24 @@ action:Action
 			sh:path action:actionCount ;
 		] ,
 		[
-			sh:datatype vocabulary:ActionStatusTypeVocab ;
-			sh:message "Value is outside the default vocabulary ActionStatusTypeVocab." ;
-			sh:path action:actionStatus ;
-			sh:severity sh:Info ;
-		] ,
-		[
+			sh:datatype xsd:string ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
-			sh:or (
-				[
-					sh:datatype vocabulary:ActionStatusTypeVocab ;
-				]
-				[
-					sh:datatype xsd:string ;
-				]
-			) ;
 			sh:path action:actionStatus ;
 		] ,
 		[
-			sh:message "Value is not member of the vocabulary ActionStatusTypeVocab." ;
-			sh:or (
-				[
-					sh:datatype vocabulary:ActionStatusTypeVocab ;
-					sh:in (
-						"Complete/Finish"^^vocabulary:ActionStatusTypeVocab
-						"Error"^^vocabulary:ActionStatusTypeVocab
-						"Fail"^^vocabulary:ActionStatusTypeVocab
-						"Ongoing"^^vocabulary:ActionStatusTypeVocab
-						"Pending"^^vocabulary:ActionStatusTypeVocab
-						"Success"^^vocabulary:ActionStatusTypeVocab
-						"Unknown"^^vocabulary:ActionStatusTypeVocab
-					) ;
-				]
-				[
-					sh:datatype xsd:string ;
-				]
+			sh:in (
+				"Complete/Finish"
+				"Error"
+				"Fail"
+				"Ongoing"
+				"Pending"
+				"Success"
+				"Unknown"
 			) ;
+			sh:message "Value is not member of the vocabulary ActionStatusTypeVocab." ;
 			sh:path action:actionStatus ;
+			sh:severity sh:Info ;
 		]
 		;
 	sh:targetClass action:Action ;
@@ -253,43 +233,23 @@ action:ActionFrequencyFacet
 			sh:maxCount "1"^^xsd:integer ;
 			sh:minCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
-			sh:path action:units ;
-		] ,
-		[
-			sh:datatype vocabulary:TrendVocab ;
-			sh:message "Value is outside the default vocabulary TrendVocab." ;
 			sh:path action:trend ;
-			sh:severity sh:Info ;
 		] ,
 		[
+			sh:datatype xsd:string ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:minCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
-			sh:or (
-				[
-					sh:datatype vocabulary:TrendVocab ;
-				]
-				[
-					sh:datatype xsd:string ;
-				]
-			) ;
-			sh:path action:trend ;
+			sh:path action:units ;
 		] ,
 		[
-			sh:message "Value is not member of the vocabulary TrendVocab." ;
-			sh:or (
-				[
-					sh:datatype vocabulary:TrendVocab ;
-					sh:in (
-						"Decreasing"^^vocabulary:TrendVocab
-						"Increasing"^^vocabulary:TrendVocab
-					) ;
-				]
-				[
-					sh:datatype xsd:string ;
-				]
+			sh:in (
+				"Decreasing"
+				"Increasing"
 			) ;
+			sh:message "Value is not member of the vocabulary TrendVocab." ;
 			sh:path action:trend ;
+			sh:severity sh:Info ;
 		]
 		;
 	sh:targetClass action:ActionFrequencyFacet ;
